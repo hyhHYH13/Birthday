@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="floating-hearts"></div>
+        
+        <div class="page" id="loginPage">
+            <div class="login-card">
+                <h1 class="login-title">生日祝福</h1>
+                <p class="login-subtitle">请输入你的名字和密码开始生日之旅</p>
+                <div class="input-group">
+                    <input type="text" id="nameInput" placeholder="你的名字" autocomplete="off">
+                    <input type="password" id="passwordInput" placeholder="密码" autocomplete="off">
+                    <button id="loginBtn" class="login-btn">进入</button>
+                </div>
+                <p id="errorMessage" class="error-message"></p>
+                <p class="password-hint">💡 密码是生日哦，正月以及你一直都是18岁</p>
+                <div class="heart-decoration">
+                    <div class="heart heart-1"></div>
+                    <div class="heart heart-2"></div>
+                    <div class="heart heart-3"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page hidden" id="cakePage">
+            <div class="cake-section">
+                <h2 class="page-title">生日蛋糕</h2>
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="cake-layer layer-1"></div>
+                        <div class="cake-layer layer-2"></div>
+                        <div class="cake-layer layer-3"></div>
+                        <div class="candles">
+                            <div class="candle">
+                                <div class="flame"></div>
+                            </div>
+                            <div class="candle">
+                                <div class="flame"></div>
+                            </div>
+                            <div class="candle">
+                                <div class="flame"></div>
+                            </div>
+                        </div>
+                        <div class="cake-decoration"></div>
+                    </div>
+                </div>
+                <button id="blowCandlesBtn" class="action-btn">吹蜡烛</button>
+            </div>
+        </div>
+        
+        <div class="page hidden" id="wishesPage">
+            <div class="wishes-section">
+                <h2 class="page-title">生日祝福</h2>
+                <div class="wishes-container">
+                    <div class="wish-card">
+                        <p class="wish-text">亲爱的徐馨月，生日快乐！</p>
+                    </div>
+                    <div class="wish-card">
+                        <p class="wish-text">愿你的每一天都充满阳光和欢笑</p>
+                    </div>
+                    <div class="wish-card">
+                        <p class="wish-text">愿所有的美好都如期而至</p>
+                    </div>
+                    <div class="wish-card">
+                        <p class="wish-text">愿你永远幸福快乐，心想事成！</p>
+                    </div>
+                    <div class="wish-card">
+                        <p class="wish-text">生日快乐，友谊长存！</p>
+                    </div>
+                </div>
+                <button id="nextToPhotosBtn" class="action-btn">查看照片</button>
+            </div>
+        </div>
+        
+        <div class="page hidden" id="photosPage">
+            <div class="photos-section">
+                <h2 class="page-title">美好回忆</h2>
+                <div class="photos-grid">
+                    <div class="photo-card">
+                        <img src="小徐1.jpg" alt="小徐" class="photo-image">
+                        <p class="photo-caption">美好的回忆</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="小徐2.jpg" alt="小徐" class="photo-image">
+                        <p class="photo-caption">快乐时光</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="小徐3.jpg" alt="小徐" class="photo-image">
+                        <p class="photo-caption">友谊万岁</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="小徐4.jpg" alt="小徐" class="photo-image">
+                        <p class="photo-caption">珍贵瞬间</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="小徐5.jpg" alt="小徐" class="photo-image">
+                        <p class="photo-caption">美好时光</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="小徐6.jpg" alt="小徐" class="photo-image">
+                        <p class="photo-caption">永远的朋友</p>
+                    </div>
+                </div>
+                <button id="restartBtn" class="action-btn">重新开始</button>
+                <button id="moreWishesBtn" class="action-btn" style="margin-left: 10px;">更多祝福</button>
+            </div>
+        </div>
+        
+        <div class="confetti-container"></div>
+        
+        <div class="modal" id="photoModal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+        
+        <div class="wishes-fullscreen" id="wishesFullscreen">
+            <span class="wishes-close">&times;</span>
+            <div class="wishes-content">
+                <h2 class="wishes-title">生日祝福</h2>
+                <div class="wishes-list" id="wishesList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
